@@ -18,23 +18,23 @@ You can represent the algorithm with this graphic process:
 
 ```mermaid
 sequenceDiagram
-    participant A as Elemento A
-    participant B as Elemento B
-    participant C as Elemento C
-    participant D as Elemento D
-    participant E as Elemento E
-    participant F as Elemento F
+    participant A as Element A
+    participant B as Element B
+    participant C as Element C
+    participant D as Element D
+    participant E as Element E
+    participant F as Element F
 
-    A ->> B: Comparar
-    B ->> A: Intercambiar (si es necesario)
-    B ->> C: Comparar
-    C ->> B: Intercambiar (si es necesario)
-    C ->> D: Comparar
-    D ->> C: Intercambiar (si es necesario)
-    D ->> E: Comparar
-    E ->> D: Intercambiar (si es necesario)
-    E ->> F: Comparar
-    F ->> E: Intercambiar (si es necesario)
+    A ->> B: Compare
+    B ->> A: Switch (if necessary)
+    B ->> C: Compare
+    C ->> B: Switch (if necessary)
+    C ->> D: Comparae
+    D ->> C: Switch (if necessary)
+    D ->> E: Compare
+    E ->> D: Switch (if necessary)
+    E ->> F: Compare
+    F ->> E: Switch (if necessary)
 ```
 
 The insertion sorting algorithm is simple because it is only a matter of going through each element (from the beginning) and comparing it with the element in front and, if necessary, making a change of position with that element.
