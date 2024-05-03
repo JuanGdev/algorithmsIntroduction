@@ -1,17 +1,18 @@
 #include <iostream>
+#include <utility>
 #include <vector>
 
-using namespace std;
+  using namespace std;
 
-int main()
-{
-  int vectorElements;
-  int vectorValue;
-  int key;
+  int main()
+  {
+    int vectorElements;
+    int vectorValue;
+    int key;
 
-  //  User input
-  cout << "Enter the number of elements in your array: " << endl;
-  cin >> vectorElements;
+    //  User input
+    cout << "Enter the number of elements in your array: " << endl;
+    cin >> vectorElements;
 
   //  Vector constructor
   vector<int> unorderedVector(vectorElements);
@@ -25,16 +26,14 @@ int main()
   }
 
   //  Sort values
-  for(int j = 1; j < vectorElements; j+=1)
+  for(int current = 1; current < unorderedVector.size()-1; current+=1)
   {
-    key = unorderedVector[j];
-    int i = j - 1;
-    while(i >=0 && unorderedVector[i] > key)
+    key = current;
+    while(key > 0 && unorderedVector[key-1] > unorderedVector[key])
     {
-      unorderedVector[i + 1] = unorderedVector[i];
-      i -= 1;
+      swap(unorderedVector[key-1], unorderedVector[key]);
+      key -=1;
     }
-    unorderedVector[i+=1] = key;
   }
 
   //  Print elements
