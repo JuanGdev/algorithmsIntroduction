@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <utility>
 #include <vector>
@@ -16,7 +17,7 @@
 
   //  Vector constructor
   vector<int> unorderedVector(vectorElements);
-
+  int minIndex = 0;
   //  Assing values to vector
   for(int i = 0; i < vectorElements; i+=1)
   {
@@ -25,17 +26,20 @@
     unorderedVector[i] = vectorValue;
   }
 
-  //  Sort values
-  for(int current = 1; current < unorderedVector.size()-1; current+=1)
-  {
-    key = current;
-    while(key > 0 && unorderedVector[key-1] > unorderedVector[key])
-    {
-      swap(unorderedVector[key-1], unorderedVector[key]);
-      key -=1;
-    }
-  }
 
+  //  Sort values
+  for(int current = 0; current < unorderedVector.size() - 1; current+=1)
+  {
+    minIndex = current;
+    for(int i = current+1; i<=unorderedVector.size()-1; i+=1)
+    {
+      if(unorderedVector[i] < unorderedVector[minIndex])
+      {
+        minIndex = i;
+      }
+    }
+    swap(unorderedVector[current], unorderedVector[minIndex]);
+  }
   //  Print elements
   cout << "\n\n***SORTED ARRAY***\n";
   for(int i = 0; i < vectorElements; i+=1)
