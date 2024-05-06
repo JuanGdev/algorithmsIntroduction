@@ -8,7 +8,6 @@ int main()
 {
   int vectorElements;
   int vectorValue;
-  int key;
 
   //  User input
   cout << "Enter the number of elements in your array: " << endl;
@@ -17,6 +16,7 @@ int main()
   //  Vector constructor
   vector<int> unorderedVector(vectorElements);
   int minIndex = 0;
+
   //  Assing values to vector
   for(int i = 0; i < vectorElements; i+=1)
   {
@@ -24,7 +24,6 @@ int main()
     cin >> vectorValue;
     unorderedVector[i] = vectorValue;
   }
-
 
   //  Sort values
   for(int current = 0; current < unorderedVector.size() - 1; current+=1)
@@ -39,6 +38,7 @@ int main()
     }
     swap(unorderedVector[current], unorderedVector[minIndex]);
   }
+
   //  Print elements
   cout << "\n\n***SORTED ARRAY***\n";
   for(int i = 0; i < vectorElements; i+=1)
