@@ -1,19 +1,18 @@
-
 #include <iostream>
 #include <utility>
 #include <vector>
 
-  using namespace std;
+using namespace std;
 
-  int main()
-  {
-    int vectorElements;
-    int vectorValue;
-    int key;
+int main()
+{
+  int vectorElements;
+  int vectorValue;
+  int key;
 
-    //  User input
-    cout << "Enter the number of elements in your array: " << endl;
-    cin >> vectorElements;
+  //  User input
+  cout << "Enter the number of elements in your array: " << endl;
+  cin >> vectorElements;
 
   //  Vector constructor
   vector<int> unorderedVector(vectorElements);
